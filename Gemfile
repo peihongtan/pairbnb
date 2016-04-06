@@ -49,3 +49,5 @@ end
 gem 'clearance'
 
 gem "figaro"
+
+gem 'omniauth-facebook'

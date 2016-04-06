@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'users#index'
 
+  get "/auth/:provider/callback" => "sessions#create_from_omniauth" # go to fb, crawl out information tht u allow fb to scope for u, then u use the info to login with clearances
+  resources :users, only: [:show, :edit, :update, :destroy] 
+  get '/login', :to => "sessions#new", :as => :login 
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
