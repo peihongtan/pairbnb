@@ -1,4 +1,6 @@
-class UsersController < ApplicationController
-	def index
-  end
+class UsersController < Clearance::SessionsController
+
+	def edit
+	end
+
 end
