@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
+$('.input-daterange input').each(function() {
+    $(this).datepicker("clearDates");
+});

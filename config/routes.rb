@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
   get "/auth/:provider/callback" => "sessions#create_from_omniauth" # go to fb, crawl out information tht u allow fb to scope for u, then u use the info to login with clearances
   resources :users, only: [:show, :edit, :update, :destroy] 
+  resources :listings
   get '/login', :to => "sessions#new", :as => :login 
-
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
