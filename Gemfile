@@ -51,3 +51,7 @@ gem 'clearance'
 gem "figaro"
 
 gem 'omniauth-facebook'
+
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+
+gem 'mini_magick'

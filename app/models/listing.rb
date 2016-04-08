@@ -1,3 +1,4 @@
 class Listing < ActiveRecord::Base
-	has_many :listings
+	mount_uploaders :photos, PhotoUploader
+	belongs_to :user
 end
