@@ -1,0 +1,4 @@
+ <% @listings.each do |listing| %>
+
+ <li><%= listing.home_type %> <%= link_to "Edit Your Listing", edit_listing_path(listing) %></li>  
+ <% end %>    

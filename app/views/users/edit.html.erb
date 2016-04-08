@@ -1,0 +1,10 @@
+<h1>Edit</h1>
+
+<%= image_tag(current_user.avatar.url) %>
+
+<%= form_for @user do |f| %>
+    <label>My Avatar</label>
+    <%= f.file_field :avatar %><br />
+    <class="submit-field">
+      <%= f.submit value= "upload"%>
+<% end %>
