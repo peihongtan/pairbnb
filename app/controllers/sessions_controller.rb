@@ -18,4 +18,7 @@ class SessionsController < Clearance::SessionsController
     # root 'users#index'
     redirect_to @next, :notice => @notice
   end
+
+  def create
+  end 
 end

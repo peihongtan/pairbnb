@@ -1,0 +1,6 @@
+<h1>hi :)</h1>
+
+<% @reservations.each do |r| %>
+
+ <li><%= r.check_in %> <%= link_to "Your reservations", edit_reservation_path(r) %></li>  
+ <% end %>    

@@ -2,3 +2,7 @@
   <h1>Home away from home! <small>Find the comfort of your own home everywhere in the world with pairbnb.</small> </h1>
 </div>
 
+  <% @listings.each do |listing| %>
+
+ <li><%= listing.user_address %> <%= link_to "Book now!!", listing_path(listing) %></li>  
+ <% end %>  

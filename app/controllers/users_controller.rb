@@ -14,4 +14,11 @@ class UsersController < Clearance::SessionsController
 			render :edit
 		end
 	end 
+
+	def index
+		@listings = Listing.all
+	end 
+
+	def show
+	end 
 end
