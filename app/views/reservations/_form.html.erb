@@ -1,0 +1,12 @@
+<%= form_for @reservation do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %><br />
+  <%= f.hidden_field :listing_id, value: @listing_id %><br />
+ 
+  <class="input-group input-daterange">
+    Availability Period : <%= f.date_field :check_in %>
+    <class="input-group-addon">to
+    <%= f.date_field :check_out %><br />
+
+    <class="submit-field">
+    <%= f.submit "Book now!"%>  
+<% end %>

@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
 	# byebug
 	@user = current_user
     @listing = @user.listings.new(listing_params)
-    byebug
+    # byebug
     	if @listing.save
         	redirect_to root_path
         else
@@ -21,7 +21,6 @@ class ListingsController < ApplicationController
 
 	def edit
 		@listing = current_user.listings.find(params[:id])
-
 	end
 
 	def update 
@@ -37,12 +36,16 @@ class ListingsController < ApplicationController
 		# byebug
 		# @listing = Listing.update(listing_params)
 		@listing.photos = params[:listing][:photos]
-		if @listing.save
+		if @listing.update(listing_params)
 		# byebug
 			redirect_to root_path
 		else 
 			render :edit
 		end
+	end 
+
+	def show
+		@listing = Listing.find(params[:id])
 	end 
 
   private
